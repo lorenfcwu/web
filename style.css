@@ -2,11 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
-  background: #131313;
+  background: #1a1a1d;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -32,8 +32,8 @@
   background-color: #ff8177;
   background-image: linear-gradient(
     to top,
-    #ff0844 0%,
-    #ffb199 100%
+    #c3073f 0%,
+    #950740 100%
   ); /* sets the logo gradient colour from bottom to top */
   background-size: 100%;
   -webkit-background-clip: text;
@@ -45,6 +45,7 @@
   cursor: pointer;
   text-decoration: none; /* removes underline for a tag */
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .fa-logo {
@@ -218,7 +219,7 @@
 
 /* Hero Section */
 .main {
-  background-color: #141414;
+  background-color: #1a1a1d;
 }
 
 .main__container {
@@ -229,17 +230,27 @@
   justify-content: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: #141414;
+  background-color: #1a1a1d;
   z-index: 1;
   width: 100%;
   max-width: 1500px; /* this should be the same as the max-width of the navbar (if you want) */
   padding: 0 50px;
 }
 
+.main__content p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a9a9a9;
+}
+
 .main__content h1 {
   font-size: 4rem;
   background-color: #ff8177;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-image: linear-gradient(
+    to top,
+    #c3073f 0%,
+    #950740 100%
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -248,22 +259,11 @@
 }
 
 .main__content h2 {
-  font-size: 4rem;
-  background-color: #ff8177;
-  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+font-size: 2rem;
+font-weight: 700;
+color: #a9a9a9;
 }
 
-.main__content p {
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: 700; /* We selected the 400 and 700 weights of the font from Google Fonts */
-  color: white;
-}
 
 .main__btn {
   font-size: 1rem;
@@ -340,10 +340,6 @@
     margin-top: 2rem;
   }
 
-  .main__content h2 {
-    font-size: 3rem;
-  }
-
   .main__content p {
     margin-top: 1rem;
     font-size: 1.5rem;
@@ -358,12 +354,6 @@
 
     /* font-size: 2.5rem;
     margin-top: 2rem; */
-  }
-
-  .main__content h2 {
-    font-size: 2rem;
-
-    /* font-size: 3rem; */
   }
 
   .main__content p {
@@ -381,14 +371,30 @@
   }
 }
 
-/* Services Section */
+/* About Section */
 
-.services {
-  background: #141414;
+.about {
+  background: #1a1a1d;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  padding-top: 80px;
+}
+
+.about__container h1 {
+  color: white;
+}
+
+/* Services Section */
+
+.services {
+  background: #1a1a1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 80px;
 }
 
 .services h1 {
@@ -509,7 +515,7 @@
 /* Footer Section */
 
 .footer__container {
-  background-color: #141414;
+  background-color: #1a1a1d;
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
