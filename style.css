@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.navbar {
+  background: #131313;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* ensures that the navbar is above everything else (3d) */
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto; /* https://www.w3schools.com/css/css_margin.asp */ /* centers it on the main-axis */
+  padding: 0 50px;
+}
+
+#navbar__logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(
+    to top,
+    #ff0844 0%,
+    #ffb199 100%
+  ); /* sets the logo gradient colour from bottom to top */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; /* for Chrome */
+  -moz-text-fill-color: transparent; /* for Firefox */
+  display: flex;
+  align-items: center; /* align vertically */
+  cursor: pointer;
+  text-decoration: none; /* removes underline for a tag */
+  font-size: 2rem;
+}
+
+.fa-logo {
+  margin-right: 0.5rem;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.navbar_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%; /* wrt container */
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 4px; /* rounds the corners of the box */
+  background: #f77062;
+  color: white;
+}
+
+.button:hover {
+  background: #4837ff;
+  transition: all 0.3s ease; /* ease is default */
+}
+
+.navbar__links:hover {
+  color: #f77062;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  /* when the device's max width is <= 960px, trigger on these classes */
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0;
+
+    /* the following is when width > 960px */
+    /* removed margin and padding */
+    /* display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto; 
+    padding: 0 50px; */
+  }
+
+  .navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning */
+    top: -1000px; /* sends the menu items above the screen when menu isn't selected */
+    opacity: 0;
+    transition: all 0.5s ease; /* when the hamburger menu is clicked I THINK */
+    height: 50vh; /* essentially 50% of the screen */
+    z-index: -1;
+    background: black;
+  }
+
+  .navbar__menu.active {
+    /* to be activated by js */
+    background: #131313;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 50vh;
+    font-size: 1.6rem;
+  }
+
+  #navbar__logo {
+    padding-left: 25px; /* maintains logo padding from the left side of the screen */
+  }
+
+  .navbar__toggle {
+    cursor: pointer;
+  }
+
+  .navbar__toggle .bar {
+    /* all of class bar that are a descendent of .navbar__toggle */
+    /* the three spans are the three lines of the hamburger menu */
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    display: block;
+  }
+
+  .navbar__item {
+    width: 100%;
+  }
+
+  .navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+  }
+
+  .navbar_btn {
+    padding-bottom: 18rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    height: 80px;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(1) {
+    /* the top and the bottom lines will form an x */
+    transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Hero Section */
+.main {
+  background-color: #141414;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* basically separates the columns 1:1 width-wise */ /* https://www.youtube.com/watch?v=Dp7kOWhAjuo */
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px; /* this should be the same as the max-width of the navbar (if you want) */
+  padding: 0 50px;
+}
+
+.main__content h1 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700; /* We selected the 400 and 700 weights of the font from Google Fonts */
+  color: white;
+}
+
+.main__btn {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  margin-top: 2rem;
+  cursor: pointer;
+  position: relative; /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2; /* for hover effect, normally wouldn't be required */
+  color: white;
+  text-decoration: none;
+}
+
+.main__btn:after {
+  position: absolute;
+  content: "";
+  top: 0; /* top and left interact differently based on position type */
+  left: 0; /* https://developer.mozilla.org/en-US/docs/Web/CSS/top */
+  width: 0;
+  height: 100%;
+  background: #4837ff;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  /* i dont think this section is doing anything */
+  color: white;
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 90%;
+  width: 90%;
+}
+
+/* Mobile Responsive */
+
+/* for larger phone screens */
+@media screen and (max-width: 960px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .main__content h2 {
+    font-size: 3rem;
+  }
+
+  .main__content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* for smaller phone screens */
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+
+    /* font-size: 2.5rem;
+    margin-top: 2rem; */
+  }
+
+  .main__content h2 {
+    font-size: 2rem;
+
+    /* font-size: 3rem; */
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    /* margin-top: 1rem;
+    font-size: 1.5rem; */
+  }
+  .main__btn {
+    padding: 12px 36px;
+    /* padding: 14px 32px; */ /* from before mobile responsive */
+    margin: 2.5rem 0;
+    /* margin-top: 2rem; */ /* used to just be for top */
+  }
+}
+
+/* Services Section */
+
+.services {
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.services h1 {
+  background-color: #ff8177;
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  );
+  background-size: 100%;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/* would probably do this section differently, but this is what the tutorial has */
+
+.services__card {
+  margin: 1rem;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+      /* not sure what this is for, maybe for dark photos only */ to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("images/ttt.jpg");
+  background-size: cover;
+  /* position: relative;
+  color: white; */
+}
+
+.services__card:nth-child(2) {
+  /* following stuff is all inherited from .services__card */
+  /* margin: 1rem;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px; */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(17, 17, 17, 0.6) 100%
+    ),
+    url("/images/plane.png");
+  /* background-size: cover; */
+  /* position: relative;
+  color: white; */
+}
+
+.services h2 {
+  position: relative;
+  top: 300px;
+  left: 30px;
+}
+
+.services__card p {
+  position: relative;
+  top: 320px;
+  left: 30px;
+}
+
+.services__card button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #ff7062;
+  position: relative;
+  top: 340px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .services {
+    height: 1600px;
+  }
+
+  .services h1 {
+    font-size: 2rem;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services {
+    height: 1400px;
+  }
+  .services h1 {
+    font-size: 1.2rem;
+  }
+  .services__card {
+    width: 300px;
+  }
+}
+
+/* Footer Section */
+
+.footer__container {
+  background-color: #141414;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer__logo {
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__link--wrapper {
+  display: flex;
+}
+
+.footer__link--items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.footer__link--items a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+  color: lightgrey;
+  transition: 0.3s ease-out;
+}
+
+/* Social Icons */
+
+.social__icons--link > img {
+  height: 44px;
+  width: 44px;
+  object-fit: cover;
+  opacity: 80%;
+}
+
+.social__media {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.social__media--wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+}
+
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.website__rights {
+  color: white;
+}
+
+@media screen and (max-width: 960px) {
+  .footer__links {
+    padding-top: 2rem;
+  }
+
+  .website__rights {
+    margin-bottom: 2rem;
+  }
+
+  .footer__link--wrapper {
+    flex-direction: column;
+  }
+
+  .social__media--wrapper {
+    flex-direction: column;
+  }
+}
