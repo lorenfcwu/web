@@ -29,23 +29,10 @@
 }
 
 #navbar__logo {
-  background-color: #ff8177;
-  background-image: linear-gradient(
-    to top,
-    #c3073f 0%,
-    #950740 100%
-  ); /* sets the logo gradient colour from bottom to top */
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; /* for Chrome */
-  -moz-text-fill-color: transparent; /* for Firefox */
   display: flex;
   align-items: center; /* align vertically */
   cursor: pointer;
-  text-decoration: none; /* removes underline for a tag */
-  font-size: 2rem;
-  font-weight: 700;
 }
 
 #navbar__logo__img {
@@ -76,6 +63,7 @@
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-weight: 700;
 }
 
 .navbar_btn {
@@ -98,17 +86,18 @@
   border: none;
   outline: none;
   border-radius: 4px; /* rounds the corners of the box */
-  background: #950740;
+  background: #c3073f;
   color: white;
 }
 
 .button:hover {
-  background: #4837ff;
+  /* background: #4837ff; */
+  background: #950740;
   transition: all 0.3s ease; /* ease is default */
 }
 
 .navbar__links:hover {
-  color: #f77062;
+  color: #c3073f;
   transition: all 0.3s ease;
 }
 

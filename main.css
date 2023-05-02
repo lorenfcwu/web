@@ -13,18 +13,19 @@
   background-color: #1a1a1d;
   z-index: 1;
   width: 100%;
-  max-width: 1500px; /* this should be the same as the max-width of the navbar (if you want) */
+  max-width: 1200px; /* this should be the same as the max-width of the navbar (if you want) */
   padding: 0 50px;
 }
 
 .main__content p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #a9a9a9;
 }
 
 .main__content h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  font-weight: 900;
   background-color: #ff8177;
   background-image: linear-gradient(to top, #c3073f 0%, #950740 100%);
   background-size: 100%;
@@ -35,7 +36,7 @@
 }
 
 .main__content h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #a9a9a9;
 }
@@ -53,6 +54,10 @@
 
 /* for larger phone screens */
 @media screen and (max-width: 960px) {
+  .main {
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+  }
   .main__container {
     display: grid;
     grid-template-columns: auto;
@@ -61,6 +66,7 @@
     width: 100%;
     margin: 0 auto;
     height: 70vh;
+    padding-bottom: 30vh;
   }
 
   .main__content {
@@ -71,7 +77,7 @@
   }
 
   .main__content h1 {
-    font-size: 4rem;
+    font-size: 4.2rem;
   }
 
   .main__content p {
@@ -104,6 +110,6 @@
   }
 
   #main__img {
-    width: 70%;
+    width: 100%;
   }
 }
