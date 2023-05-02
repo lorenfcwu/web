@@ -1,0 +1,26 @@
+.about {
+  background: #1a1a1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.about__container h1 {
+  color: white;
+  padding-top: 100px;
+  height: auto;
+  max-width: 1500px;
+}
+
+@media screen and (max-width: 960px) {
+  .about__container {
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about__container {
+    margin-top: 30vh;
+  }
+}

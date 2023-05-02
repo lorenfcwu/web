@@ -1,0 +1,109 @@
+.main {
+  background-color: #1a1a1d;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* basically separates the columns 1:1 width-wise */ /* https://www.youtube.com/watch?v=Dp7kOWhAjuo */
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #1a1a1d;
+  z-index: 1;
+  width: 100%;
+  max-width: 1500px; /* this should be the same as the max-width of the navbar (if you want) */
+  padding: 0 50px;
+}
+
+.main__content p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #a9a9a9;
+}
+
+.main__content h1 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #c3073f 0%, #950740 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a9a9a9;
+}
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  height: 80%;
+  width: 80%;
+}
+
+/* Mobile Responsive */
+
+/* for larger phone screens */
+@media screen and (max-width: 960px) {
+  .main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: stretch;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 70vh;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+    align-content: end;
+    display: grid;
+  }
+
+  .main__content h1 {
+    font-size: 4rem;
+  }
+
+  .main__content p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .main__content h2 {
+    font-size: 1.6rem;
+  }
+
+  #main__img {
+    max-width: 400px;
+  }
+}
+
+/* for smaller phone screens */
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 3.5rem;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+  }
+
+  .main__content h2 {
+    font-size: 1.5rem;
+  }
+
+  #main__img {
+    width: 70%;
+  }
+}
