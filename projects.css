@@ -1,3 +1,215 @@
 .projects {
   background: #1a1a1d;
 }
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.projects__title {
+  color: white;
+  font-size: 3rem;
+}
+
+.projects__container hr {
+  width: 230px;
+  background: #c3073f;
+  border: none;
+  height: 2px;
+  margin-bottom: 30px;
+}
+
+.projects__project__wrapper1,
+.projects__project__wrapper2 {
+  display: flex;
+  column-gap: 4rem;
+  max-width: 900px;
+}
+
+.projects__project__wrapper1 {
+  margin: 40px 150px 40px 50px;
+}
+
+.projects__project__wrapper2 {
+  margin: 40px 50px 40px 150px;
+}
+
+.projects__project__about1,
+.projects__project__about2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 80%; */
+}
+
+.projects__project__about2 {
+  align-items: flex-end;
+}
+
+.projects__project__title1,
+.projects__project__title2 {
+  color: #a9a9a9;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.projects__project__title1,
+.projects__project__skills1 {
+  padding-left: 11px;
+}
+
+.projects__project__title2,
+.projects__project__skills2 {
+  padding-right: 11px;
+}
+
+.projects__project__title1:hover,
+.projects__project__title2:hover {
+  /* text-decoration: underline; */
+  transition: all 0.3s ease-in-out;
+  color: #c3073f;
+}
+
+.projects__project__info1,
+.projects__project__info2 {
+  margin: 10px 0px;
+  padding: 10px;
+  border-top: 1px solid #c3073f;
+  color: #a9a9a9;
+  font-size: 0.9rem;
+}
+
+.projects__project__info1 {
+  border-left: 1px solid #c3073f;
+}
+
+.projects__project__info2 {
+  text-align: end;
+  border-right: 1px solid #c3073f;
+}
+
+.projects__project__skills1,
+.projects__project__skills2 {
+  color: #a9a9a9;
+  font-size: 0.8rem;
+  font-weight: 500;
+  word-spacing: 20px;
+}
+
+.projects__project__skills1 mark,
+.projects__project__skills2 mark {
+  background: transparent;
+  font-size: 0.8rem;
+  color: #a9a9a9;
+  font-weight: 500;
+  word-spacing: normal;
+}
+
+.projects__project__image1,
+.projects__project__image2 {
+  max-width: 350px;
+  max-height: 300px;
+}
+
+.projects__project__image1:hover,
+.projects__project__image2:hover {
+  border: solid 1px #c3073f;
+}
+
+@media screen and (max-width: 960px) {
+  .projects__project__wrapper1,
+  .projects__project__wrapper2 {
+    column-gap: 2rem;
+    max-width: 700px;
+  }
+
+  .projects__project__wrapper1,
+  .projects__project__wrapper2 {
+    margin: 40px 50px 40px 50px;
+  }
+
+  .projects__project__title1,
+  .projects__project__title2 {
+    font-size: 1.5rem;
+  }
+
+  .projects__project__image1,
+  .projects__project__image2 {
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+  .projects__project__info1,
+  .projects__project__info2 {
+    font-size: 0.7rem;
+  }
+
+  .projects__project__skills1,
+  .projects__project__skills2 {
+    font-size: 0.7rem;
+    word-spacing: 15px;
+  }
+
+  .projects__project__skills1 mark,
+  .projects__project__skills2 mark {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .projects__project__wrapper1,
+  .projects__project__wrapper2 {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin: 10px 50px 20px 50px;
+  }
+
+  .projects__project__wrapper1 {
+    flex-direction: column;
+  }
+
+  .projects__project__wrapper2 {
+    flex-direction: column-reverse;
+  }
+
+  .projects__project__info1,
+  .projects__project__info2 {
+    margin: 10px 0px 0px;
+    text-align: center;
+    border-right: transparent;
+    border-left: transparent;
+  }
+
+  .projects__project__title1,
+  .projects__project__title2 {
+    font-size: 1.5rem;
+  }
+
+  .projects__project__skills1,
+  .projects__project__skills2 {
+    padding-bottom: 10px;
+  }
+
+  .projects__project__title1,
+  .projects__project__skills1 {
+    padding-left: 0px;
+  }
+
+  .projects__project__title2,
+  .projects__project__skills2 {
+    padding-right: 0px;
+  }
+
+  .projects__project__about1,
+  .projects__project__about2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
