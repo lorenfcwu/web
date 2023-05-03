@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,7 +36,7 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="#aboutme" class="navbar__links"> About Me </a>
+            <a href="#about" class="navbar__links"> About Me </a>
           </li>
           <li class="navbar__item">
             <a href="#skills" class="navbar__links"> Skills </a>
@@ -43,7 +45,7 @@
             <a href="#services_id" class="navbar__links"> Projects </a>
           </li>
           <li class="navbar__item">
-            <a href="#services_id" class="navbar__links"> Contact </a>
+            <a href="#contact" class="navbar__links"> Contact </a>
           </li>
           <li class="navbar__btn">
             <a href="/" class="button"> Resume </a>
@@ -65,15 +67,15 @@
       </div>
     </div>
 
-    <!-- About Me Section -->
+    <!-- About Section -->
     <div class="about">
-      <div class="about__container" id="aboutme">
+      <div class="about__container" id="about">
         <h1 class="about__title">About Me</h1>
         <hr />
         <p class="about__info">
           <br />
           Hello! My name is Loren and I am a computer engineer with a passion
-          for <mark>full stack development</mark>,
+          for <mark>web development</mark>,
           <mark>artificial intelligence</mark>, and <mark>robotics</mark>.
           <br />
           <br />
@@ -87,6 +89,28 @@
           snowboarding, and supporting the dumpster fire that is the Vancouver
           Canucks.
         </p>
+        <div class="about__links__container">
+          <a
+            href="https://www.linkedin.com/in/lorenwu/"
+            class="about__link"
+            target="_blank"
+          >
+            <img src="images/linkedin.png" id="linkedin__img" />
+          </a>
+          <a
+            href="mailto:loren13wu@gmail.com"
+            class="about__link"
+            target="_blank"
+          >
+            <img src="images/mail.png" alt="" />
+          </a>
+          <a
+            href="https://github.com/lorenfcwu"
+            class="about__link"
+            target="_blank"
+            ><img src="images/github.png"
+          /></a>
+        </div>
       </div>
     </div>
 
@@ -195,7 +219,7 @@
       </div>
     </div>
 
-    <!-- About Section -->
+    <!-- Projects Section -->
     <div class="services" id="services_id">
       <h1>This is maybe where I can put my stuff</h1>
       <div class="services__container">
@@ -212,47 +236,24 @@
       </div>
     </div>
 
+    <!-- Contact Section -->
+    <div class="contact">
+      <div class="contact__container" id="contact">
+        <h1 class="contact__title">Get In Touch</h1>
+        <hr />
+        <p class="contact__info">
+          If you have any questions or would like to connect, please feel free
+          to reach out, I'm always open to saying hi!
+        </p>
+        <a href="mailto:loren13wu@gmail.com" class="contact__button">
+          Contact Me
+        </a>
+      </div>
+    </div>
+
     <!-- Footer Section -->
     <div class="footer__container">
-      <div class="footer__links">
-        <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-            <h2>About Me</h2>
-            <a href="/"> Background</a>
-            <a href="/"> Filler</a>
-            <a href="/"> Unfortunate</a>
-            <a href="/"> How it works</a>
-            <a href="/"> TOS</a>
-          </div>
-          <div class="footer__link--items">
-            <h2>About Me</h2>
-            <a href="/"> Background</a>
-            <a href="/"> Filler</a>
-            <a href="/"> Unfortunate</a>
-            <a href="/"> How it works</a>
-            <a href="/"> TOS</a>
-          </div>
-        </div>
-        <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-            <h2>About Me</h2>
-            <a href="/"> Background</a>
-            <a href="/"> Filler</a>
-            <a href="/"> Unfortunate</a>
-            <a href="/"> How it works</a>
-            <a href="/"> TOS</a>
-          </div>
-          <div class="footer__link--items">
-            <h2>About Me</h2>
-            <a href="/"> Background</a>
-            <a href="/"> Filler</a>
-            <a href="/"> Unfortunate</a>
-            <a href="/"> How it works</a>
-            <a href="/"> TOS</a>
-          </div>
-        </div>
-      </div>
-      <div class="social__media">
+      <div class="social__media" id="bottom">
         <div class="social__media--wrapper">
           <div class="footer__logo">
             <a href="/" id="footer__logo"><img src="" alt="" />Loren</a>
