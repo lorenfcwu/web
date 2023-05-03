@@ -1,0 +1,25 @@
+.footer__link {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+.footer__link:hover {
+  color: #950740;
+  transition: all 0.3s;
+}
+
+.footer hr {
+  width: 10%;
+  background: #c3073f;
+  border: none;
+  height: 2px;
+  margin: 0px 10px;
+}
+
+.footer {
+  background-color: #1a1a1d;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

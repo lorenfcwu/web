@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="skills.css" />
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,7 +43,7 @@
             <a href="#skills" class="navbar__links"> Skills </a>
           </li>
           <li class="navbar__item">
-            <a href="#services_id" class="navbar__links"> Projects </a>
+            <a href="#projects" class="navbar__links"> Projects </a>
           </li>
           <li class="navbar__item">
             <a href="#contact" class="navbar__links"> Contact </a>
@@ -62,7 +63,7 @@
           <h2>a Computer Engineer</h2>
         </div>
         <div class="main__img--container">
-          <img src="images/pic1.svg" alt="pic" id="main__img" />
+          <img src="images/programmer.svg" alt="pic" id="main__img" />
         </div>
       </div>
     </div>
@@ -220,19 +221,9 @@
     </div>
 
     <!-- Projects Section -->
-    <div class="services" id="services_id">
-      <h1>This is maybe where I can put my stuff</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <h2>Tic-Tac_toe</h2>
-          <p>CPEN 291 - Computer Engineering Design Studio I</p>
-          <button>More Info</button>
-        </div>
-        <div class="services__card">
-          <h2>Flight Friend</h2>
-          <p>CPEN 322 - Software Engineering</p>
-          <button>More Info</button>
-        </div>
+    <div class="projects">
+      <div class="project__container" id="projects">
+        <h1 class="projects__title">My Works</h1>
       </div>
     </div>
 
@@ -252,38 +243,16 @@
     </div>
 
     <!-- Footer Section -->
-    <div class="footer__container">
-      <div class="social__media" id="bottom">
-        <div class="social__media--wrapper">
-          <div class="footer__logo">
-            <a href="/" id="footer__logo"><img src="" alt="" />Loren</a>
-          </div>
-          <p class="website__rights">© Loren Wu 2023</p>
-          <div class="social__icons">
-            <a
-              href="https://www.facebook.com/"
-              class="social__icons--link"
-              target="_blank"
-            >
-              <img src="/images/facebook.png" alt="" class="facebook" />
-            </a>
-            <a
-              href="https://www.instagram.com/"
-              class="social__icons--link"
-              target="_blank"
-            >
-              <img src="/images/instagram.png" alt="" class="instagram" />
-            </a>
-            <a
-              href="https://github.com/lorenfcwu"
-              class="social__icons--link"
-              target="_blank"
-            >
-              <img src="/images/github.png" alt="" class="github" />
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="footer">
+      <hr />
+      <a
+        href="https://github.com/lorenfcwu/web"
+        class="footer__link"
+        target="_blank"
+      >
+        Created by Loren Wu
+      </a>
+      <hr />
     </div>
     <script src="app.js"></script>
   </body>
