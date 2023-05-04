@@ -1,3 +1,5 @@
+//navbar menu code
+
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 
@@ -10,6 +12,8 @@ menuLinks.addEventListener("click", () => {
   menu.classList.toggle("is-active");
   menuLinks.classList.toggle("active");
 });
+
+//dog popup code
 
 const openPopupButtons = document.querySelectorAll("[data-popup-target]");
 const closePopupButtons = document.querySelectorAll("[data-popup-close]");
@@ -43,3 +47,16 @@ function closePopup(popup) {
   popup.classList.remove("active");
   overlay.classList.remove("active");
 }
+
+//smooth scrolling links code
+
+links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach((a) => {
+  a.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
