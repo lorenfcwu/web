@@ -12,23 +12,29 @@
   height: auto;
   width: 100%;
   max-width: 1000px;
+  /* align-items: center; */
 }
 
 .about__title {
   color: white;
   font-size: 3rem;
+  width: fit-content;
+  font-weight: 900;
 }
 
 .about__container hr {
+  /* width: 235px; */
   width: 10%;
   background: #c3073f;
   border: none;
   height: 2px;
+  /* margin: auto; */
 }
 
 .about__info {
   color: #a9a9a9;
   font-size: 1.3rem;
+  /* text-align: center; */
 }
 
 .about mark {
@@ -40,6 +46,7 @@
 .about__links__container {
   display: flex;
   padding: 25px 0px 0px;
+  align-self: flex-start;
 }
 
 .about__links {
