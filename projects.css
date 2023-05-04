@@ -215,6 +215,12 @@
 }
 
 @media screen and (max-width: 640px) {
+  .projects__title {
+    color: white;
+    font-size: 3rem;
+    padding-bottom: 22px;
+  }
+
   .projects__project__skills1,
   .projects__project__skills2 {
     font-size: 0.6rem;
