@@ -109,9 +109,10 @@
 
 .projects__project__image1,
 .projects__project__image2 {
-  max-width: 350px;
-  max-height: 300px;
+  width: 350px;
   opacity: 0.6;
+  aspect-ratio: 3/2;
+  object-fit: contain;
 }
 
 .projects__project__image1:hover,
@@ -139,8 +140,7 @@
 
   .projects__project__image1,
   .projects__project__image2 {
-    max-width: 250px;
-    max-height: 250px;
+    width: 250px;
   }
 
   .projects__project__info1,
